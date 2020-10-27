@@ -279,6 +279,7 @@ dependencies {
     testRuntimeOnly "com.tngtech.archunit:archunit-junit5-engine:${archunit_junit5_version}"
     testImplementation "com.h2database:h2"
     liquibaseRuntime "com.h2database:h2"
+    compile 'io.split.client:java-client:4.0.1'
     //jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
 }
 

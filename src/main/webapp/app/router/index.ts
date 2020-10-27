@@ -25,6 +25,12 @@ const JhiLogsComponent = () => import('../admin/logs/logs.vue');
 const JhiAuditsComponent = () => import('../admin/audits/audits.vue');
 const JhiMetricsComponent = () => import('../admin/metrics/metrics.vue');
 /* tslint:disable */
+// prettier-ignore
+const Drink = () => import('../entities/drink/drink.vue');
+// prettier-ignore
+const DrinkUpdate = () => import('../entities/drink/drink-update.vue');
+// prettier-ignore
+const DrinkDetails = () => import('../entities/drink/drink-details.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 Vue.use(Router);
@@ -141,6 +147,31 @@ export default new Router({
       name: 'JhiConfigurationComponent',
       component: JhiConfigurationComponent,
       meta: { authorities: [Authority.ADMIN] }
+    }
+    ,
+    {
+      path: '/drink',
+      name: 'Drink',
+      component: Drink,
+      meta: { authorities: [Authority.USER] }
+    },
+    {
+      path: '/drink/new',
+      name: 'DrinkCreate',
+      component: DrinkUpdate,
+      meta: { authorities: [Authority.USER] }
+    },
+    {
+      path: '/drink/:drinkId/edit',
+      name: 'DrinkEdit',
+      component: DrinkUpdate,
+      meta: { authorities: [Authority.USER] }
+    },
+    {
+      path: '/drink/:drinkId/view',
+      name: 'DrinkView',
+      component: DrinkDetails,
+      meta: { authorities: [Authority.USER] }
     }
     // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here
   ]

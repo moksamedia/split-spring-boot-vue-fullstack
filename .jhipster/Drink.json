@@ -1,0 +1,46 @@
+{
+  "name": "Drink",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "size",
+      "fieldType": "DrinkSize",
+      "fieldValues": "Small,Medium,Large,XLarge,XXLarge",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "caffeineMilligrams",
+      "fieldType": "Integer",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "priceDollars",
+      "fieldType": "Integer",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201002183724",
+  "entityTableName": "drink",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

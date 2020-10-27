@@ -1,0 +1,14 @@
+enum DrinkSize {
+	Small,
+	Medium,
+	Large,
+	XLarge,
+	XXLarge
+}
+
+entity Drink {
+	name String required,
+	size DrinkSize required,
+	caffeineMilligrams Integer required,
+	priceDollars Integer required,
+}
